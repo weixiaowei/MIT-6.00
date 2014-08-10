@@ -44,3 +44,31 @@ def recurPowerNew(base, exp):
         return recurPowerNew(base*base, exp/2)
     else:
         return base*recurPowerNew(base, exp-1)
+    
+
+#L5 problem 4
+def gcdIter(a, b):
+    '''
+    a, b: positive integers
+    
+    returns: a positive integer, the greatest common divisor of a & b.
+    '''
+    # Your code here
+    c = min(a, b)
+    while a%c != 0 or b%c != 0:
+        c -= 1
+    return c
+
+
+#L5 problem 5
+def gcdRecur(a, b):
+    '''
+    a, b: positive integers
+    
+    returns: a positive integer, the greatest common divisor of a & b.
+    '''
+    # Your code here
+    if b == 0:
+        return a
+    else:
+        return gcdRecur(b, a % b)
