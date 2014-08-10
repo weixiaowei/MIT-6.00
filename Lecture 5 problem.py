@@ -106,3 +106,33 @@ def isPanlindrome(s):
             return s[0] == s[-1] and isPal(s[1:-1])
     
     return isPal(toChars(s))
+
+
+
+#L5 problem 6
+def lenIter(aStr):
+    '''
+    aStr: a string
+    
+    returns: int, the length of aStr
+    '''
+    # Your code here
+    num = 0
+    for c in aStr:
+        num += 1
+    return num
+    
+    
+
+#L5 problem 7
+def lenRecur(aStr):
+    '''
+    aStr: a string
+    
+    returns: int, the length of aStr
+    '''
+    # Your code here
+    if aStr=='':
+       return 0
+    else:
+       return 1+lenRecur(aStr[1:])
