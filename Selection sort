@@ -1,0 +1,12 @@
+#selection sort        
+s = [8, 5, 3, 2, 1, 4, 6, 7]
+lenS = len(s)
+for j in range(0, lenS-1):
+    minest = j
+    for i in range(j+1, lenS):
+        if s[i] < s[minest]:
+            minest = i
+    key = s[minest]
+    s[minest] = s[j]
+    s[j] = key
+print s
